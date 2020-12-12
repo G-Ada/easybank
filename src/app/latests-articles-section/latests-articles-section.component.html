@@ -1,0 +1,13 @@
+<section>
+    <h2>
+        Lates Articles
+    </h2>
+    <div class="container">
+        <app-articles-card *ngFor="let article of articles"
+            [image]="article.image" 
+            [author]="article.author" 
+            [title]="article.title"
+            [body]="article.body">
+        </app-articles-card>
+    </div>
+</section>

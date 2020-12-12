@@ -1,0 +1,12 @@
+<nav>
+    <img src=".././assets/logo.svg" alt="Easybank"/>
+    <img *ngIf="currentWindowWidth < 1050px" [src]="menuImageUrl" alt="menu" (click)="openCloseMenu()"/>
+    <ul *ngIf="isOpen" id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Blog</li>
+        <li>Careers</li>
+    </ul>
+    <button *ngIf="currentWindowWidth >= 1050px">Request Invite</button>
+</nav>

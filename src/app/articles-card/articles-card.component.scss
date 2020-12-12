@@ -1,0 +1,108 @@
+@import '../../styles.scss';
+
+.card {
+    border: none;
+    &:hover .card-title{
+        color: $primary-green;
+    }
+}
+
+.car-img-top {
+    height: 50%;
+}
+
+.card-body {
+    padding: 10%;
+}
+
+.card-subtitle {
+    color: $neutral-dark-blue;
+    font-size: 0.7em;
+}
+
+.card-title {
+    color: $primary-blue;
+    margin: 15px 0px;
+    font-size: 1em;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.card-text {
+    line-height: 1.4em;
+    font-size: 0.8em;
+}
+
+//MEDIA
+@media (min-width: 800px) {
+    .card-body {
+        padding: 8%;
+    }
+    .card-subtitle {
+        font-size: 0.8em;
+    }
+    .card-title {
+        font-size: 1.1em;;
+    }
+    
+    .card-text {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 1050px) {
+    img {
+        height: 40%;
+        object-fit: cover;
+    }
+    .card-body {
+        height: 60%;
+    }
+    .card-subtitle {
+        font-size: 0.7em;
+    }
+    .card-title {
+        font-size: 0.9em;
+    }
+
+    .card-text {
+        font-size: 0.8em;
+        display: inline-block;
+        position: relative;
+        max-height: 5.6em;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    img {
+        height: 45%;
+    }
+    .card-body {
+        height: 55%;
+        padding: 10%;
+    }
+    .card-title {
+        margin: 10px 0px;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1300px) {
+img {
+        height: 50%;
+    }
+    .card-body {
+        height: 50%;
+    }
+}
+
+@media (min-width: 1500px) {
+    img {
+        height: 50%;
+    }
+    .card-body {
+        height: 50%;
+    }
+}

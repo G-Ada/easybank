@@ -1,0 +1,13 @@
+<div class="card h-100">
+    <img [src]="image" class="card-img-top" alt="Article">
+    <div class="card-body">
+        <h6 class="card-subtitle">
+            By {{author}}
+        </h6>
+        <h5 class="card-title">
+            {{title}}
+        </h5>
+        <p class="card-text" ellipsis [ellipsis-content]="body" ellipsis-word-boundaries=" \n">
+        </p>
+    </div>
+</div>

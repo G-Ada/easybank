@@ -1,0 +1,86 @@
+@import '../../styles.scss';
+
+// MOBILE
+img {
+    height: fit-content;
+}
+nav {
+    background-color: $neutral-white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+ul#menu {
+    position: absolute;
+    list-style: none;
+    background-color: $neutral-white;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+ul#menu li {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: $neutral-dark-blue;
+    &:hover {
+        cursor: pointer;
+        color: $primary-blue;
+        &::after {
+            content: '';
+            position:absolute;
+            width: 100%;
+            height: 5px;
+            bottom: -110%;
+            left: 0;
+            background: linear-gradient(to right, $primary-green, $primary-cyan);
+        }
+    }
+    &:active {
+        color: $neutral-light-blue;
+        &::after {
+            opacity: 0.5;
+        }
+    }
+}
+
+// DESKTOP
+@media (min-width: 1050px) {
+    nav{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    ul#menu {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: $neutral-white;
+        padding: 15px;
+        margin: 0px;
+        width: fit-content;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    ul#menu li {
+        text-align: center;
+        padding: 0px 10px;
+        color: $neutral-dark-blue;
+    }
+}

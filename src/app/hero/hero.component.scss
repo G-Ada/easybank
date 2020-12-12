@@ -1,0 +1,113 @@
+@import "../../styles.scss";
+
+#background {
+    width: 100%;
+}
+
+div {
+    background-color: $neutral-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+    width: 100%;
+    position: relative;
+}
+
+#mockups {
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%, -41%);
+}
+
+h1{
+    margin: 0 20px;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding: 5px 30px;
+    text-align: center;
+}
+
+button {
+    margin: auto;
+}
+
+//MOBILE Y TABLETS
+@media (min-width: 500px) {
+    h1 {
+        font-size: 2.4em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 2.6em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+//DESKTOP
+@media (min-width: 1050px) {
+    div{
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 10%;
+        padding-bottom: 0px;
+        align-items: flex-end;
+    }
+    #mockups {
+        width: 55%;
+        transform: translate(10%, 15%);
+    }
+    #background {
+        width: 70%;
+        transform: translate(15%, 0%);
+    }
+    .text {
+        width: 30%;
+        min-height: inherit;
+        padding-left: 0px;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 2.1em;
+        margin: 10px 0px;
+    }
+    p {
+        text-align: left;
+        padding: 0px;
+        padding-right: 10px;
+        font-size: 0.8em;
+    }
+
+    button {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    #mockups {
+        width: 50%;
+        transform: translate(15%, 15%);
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
